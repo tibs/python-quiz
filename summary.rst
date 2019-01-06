@@ -3,17 +3,6 @@ Summary
 =======
 
 
-* Silly: Is first year using Python a prime
-* Silly: how many programming languages starting with P
-* Silly: some interesting PEP numbers (8, 4000, ...)
-
-  * 8 - Style Guide for Python Code
-  * 20 - The Zen of Python
-  * 404 - Python 2.8 Un-release Schedule
-  * 628 - Add math.tau
-  * 666 -- Reject Foolish Indentation
-
-* Knowledge: what is a PEP (Python Enhancement Proposal)
 
 * Pythonic: ``'\'...\''`` versus ``"'...'"``
 * Pythonic: '...' versus "..." (nb: Python doesn't care)
@@ -30,32 +19,17 @@ Summary
 * Usage: dictionary versus set
 * Usage: how to specify an empty dictionary
 * Usage: how to specify an empty set
+* Usage: ``help(<topic>)`` at prompt - equivalent at the command line?
+  (nb: if ``pydoc`` isn't installed, try ``python3 -m pydoc <topic>``)
+
+* Given ``a, = 1,``, what is the type of a (``type(a)``)
 
 * Knowledge: why do we need self?
 
-
-* Maybe: Python datastructures corresponding to:
-
-  * Array
-  * List (singly linked)
-  * List (doubly linked)
-  * Set
-  * Bag
-  * Dictionary
-
 * Knowledge: what is the "@" operator used for?
+* Knowledge: what are the results of ``2**3`` and ``2^3`` (power versus
+  bitwise exclusive or)
 
-* Prompt: 1+2
-* Prompt: 'string' versus "string"
-* Prompt: None
-* Prompt: a versus print(a) (for a string, a = 'fred')
-* Prompt: 1 + '2'
-* Prompt: "naming" a function versus calling it (``()`` as an operator!)
-* Prompt: ``quit``
-* Prompt: how to quit/exit the Python REPL
-* Prompt: try/except/finally
-* Prompt: function with try and finally both doing ``return``
-* Prompt: try/except/else/finally (note that the order matters)
 * Prompt: for/else
 
 * still to write: something about zip over the same iterator, and use of
@@ -80,9 +54,20 @@ Summary
     >>> list(zip(a,a))
     [(1, 2), (3, 4)]
 
-* still to write: sort method versus sorted function, reverse method versus
-  reversed function - maybe something like "give ``a = '1234'`` what is
-  ``print(a.sorted())`` and what is ``print(sorted(a))``.
+* use of asterisk in assignment: ``a, b, *rest = [1,2,3,4]`` or ``a, *middle, b =
+  (1,2,3,4)``
+
+* use of asterisk to "unpack" a sequence: ``fn(*a)`` or even ``a=(1,2,3);
+  b=[*a]`` or with dictionaries to combine them:
+
+  .. code:: python
+
+    >>> a = {1:2, 3:4}
+    >>> b = {1:10, 2: 20}
+    >>> {*a, *b}
+    {1, 2, 3}
+    >>> {**a, **b}
+    {1: 10, 3: 4, 2: 20}
 
 * still to write: if I do ``open("filename", "r").read()``, when does the file
   get closed?
