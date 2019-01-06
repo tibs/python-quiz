@@ -17,7 +17,7 @@ Note that Python 3 is assumed throughout.
 
 ----
 
-Silly: first year
+Intro: first year
 =================
 
 In what year did you first use Python?
@@ -37,7 +37,7 @@ Prime years between 1990 and 2019 are:
 
 ----
 
-Silly: beginning with P
+Intro: beginning with P
 =======================
 
 How many programming languages can you name that start with P, not including
@@ -112,7 +112,7 @@ and Python itself
 
 ----
 
-Silly: offside rule
+Intro: offside rule
 ===================
 
 How many programming languages that use significant indentation ("the offside
@@ -148,134 +148,6 @@ XL,
 and Python itself
 
 Apparently ISWIM is the abstract language that introduced the rule.
-
-----
-
-Silly: PEPs
-===========
-
-Can you identify these PEPs?
-
-* 8
-* 20
-* 404
-* 628
-* 666
-
-----
-
-* 8 - Style Guide for Python Code
-* 20 - The Zen of Python
-* 404 - Python 2.8 Un-release Schedule (i.e., there won't be a Python 2.8)
-* 628 - Add math.tau (i.e., ``2 pi`` which starts 6.28)
-* 666 -- Reject Foolish Indentation (i.e., stop people arguing about how to
-  indent)
-
-----
-
-REPL: string 1
-==============
-
-What does this print?
-
-.. code:: python
-
-  >>> 'A string'
-
-----
-
-.. code:: python
-
-  >>> 'A string'
-  'A string'
-
-----
-
-REPL: string 2
-==============
-
-So what does this print?
-
-.. code:: python
-
-  >>> "A string"
-
-----
-
-.. code:: python
-
-  >>> "A string"
-  'A string'
-
-----
-
-REPL: string 3
-==============
-
-So what does this print?
-
-.. code:: python
-
-  >>> 'A \'string\''
-
-----
-
-.. code:: python
-
-  >>> 'A \'string\''
-  "A 'string'"
-
-----
-
-REPL: string 4
-==============
-
-OK, so what does this print?
-
-.. code:: python
-
-  >>> "A \"string\""
-
-----
-
-.. code:: python
-
-  >>> "A \"string\""
-  'A "string"'
-
-REPL: string 5
-==============
-
-So, so what does this print?
-
-.. code:: python
-
-  >>> print("A \"string\"")
-
-----
-
-.. code:: python
-
-  >>> print("A \"string\"")
-  A "string"
-
-----
-
-Summary of string quoting
-=========================
-
-.. code:: python
-
-  >>> 'A string'
-  'A string'
-  >>> "A string"
-  'A string'
-  >>> 'A \'string\''
-  "A 'string'"
-  >>> "A \"string\""
-  'A "string"'
-  >>> print("A \"string\"")
-  A "string"
 
 ----
 
@@ -650,31 +522,6 @@ Which do you think looks simpler?
 This is a trick question - it's a personal opinion. In general, for something
 this simple, I prefer the third.
 
-----
-
-Sorting
-=======
-
-What does the following do?
-
-.. code:: python
-
-  >>> a = [4, 3, 2, 1]
-  >>> print(sorted(a) + sorted(a))
-  >>> print(a.sort() + a.sort())
-
-----
-
-.. code:: python
-
-  >>> a = [4, 3, 2, 1]
-  >>> print(sorted(a) + sorted(a))
-  [1, 2, 3, 4, 1, 2, 3, 4]
-  >>> print(a.sort() + a.sort())
-  Traceback (most recent call last):
-    File "<stdin>", line 1, in <module>
-  TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
-
 -----
 
 Tuples 1
@@ -985,25 +832,6 @@ What results do the following produce? (one point for each one corect)
   True
 
 ----
-
-Did you know?
-=============
-
-Did you know that instead of:
-
-.. code:: python
-
-  >>> not ('a' in 'def')
-  True
-
-you can do:
-
-.. code:: python
-
-  >>> 'a' not in 'def'
-  True
-
-====
 
 Conundrum: C does the same
 ==========================

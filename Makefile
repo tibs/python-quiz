@@ -9,6 +9,7 @@ default: html pdf
 .PHONY: html
 html:
 	rst2html.py README.rst README.html
+	rst2html.py python-quiz-slides-short.rst python-quiz-slides-short.html
 	rst2html.py python-quiz-slides.rst python-quiz-slides.html
 	rst2html.py python-quiz-notes.rst python-quiz-notes.html
 
@@ -28,11 +29,13 @@ notes:
 slides:
 	pandoc python-quiz-slides.rst -t beamer -o python-quiz-slides-4x3.pdf -V aspectratio:43
 	pandoc python-quiz-slides.rst -t beamer -o python-quiz-slides-16x9.pdf -V aspectratio:169
+	pandoc python-quiz-slides-short.rst -t beamer -o python-quiz-slides-short-4x3.pdf -V aspectratio:43
+	pandoc python-quiz-slides-short.rst -t beamer -o python-quiz-slides-short-16x9.pdf -V aspectratio:169
 
 .PHONY: 43
 43:
-	pandoc python-quiz-slides.rst -t beamer -o python-quiz-slides-4x3.pdf -V aspectratio:43
-	open python-quiz-slides-4x3.pdf
+	pandoc python-quiz-slides-short.rst -t beamer -o python-quiz-slides-short-4x3.pdf -V aspectratio:43
+	open python-quiz-slides-short-4x3.pdf
 
 .PHONY: clean
 clean:
@@ -43,5 +46,5 @@ help:
 	@echo 'make         same as: make html pdf'
 	@echo 'make pdf     same as: make slides'
 	@echo 'make html    create HTML files using rst2html'
-	@echo 'make slides  just create python-quiz-slides-[4x3|16x9].pdf'
+	@echo 'make slides  just create python-quiz-slides[-short]-[4x3|16x9].pdf'
 	@echo 'make clean   delete HTML files'
