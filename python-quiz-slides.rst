@@ -144,31 +144,8 @@ Or even:
 
 ----
 
-4: Not Perl [1]
-===============
-
-What does this print?
-
-.. code:: python
-
-  >>> 1 + '2'
-
-----
-
-.. code:: python
-
-  >>> 1 + '2'
-  Traceback (most recent call last):
-    File "<stdin>", line 1, in <module>
-  TypeError: unsupported operand type(s) for +: 'int' and 'str
-
-.. ' to make vim coloriser happy
-
-
-----
-
-5: To the... [2]
-================
+4: To the... [1 for each]
+=========================
 
 What does the following print?
 
@@ -183,13 +160,16 @@ What does the following print?
   >>> print(2**3, 2^3)
   8 1
 
-The first is ``power``, and the second ``bitwise exclusive or``.  2 cubed is
-8, binary 10 exclusive or'ed with binary 11 is binary 1.
+The first is ``power``, and the second ``bitwise exclusive or``.
+
+2 cubed is 8
+
+Binary ``10`` exclusive or'ed with binary ``11`` is binary ``01``.
 
 
 ----
 
-6: Empty function [1]
+5: Empty function [1]
 =====================
 
 What does this function return?
@@ -214,7 +194,7 @@ It returns ``None``.
 
 ----
 
-7: Empty function 2 [1]
+6: Empty function 2 [1]
 =======================
 
 What does this code do?
@@ -222,7 +202,7 @@ What does this code do?
 .. code:: python
 
   def fn():
-      pass
+      print('Aha')
   fn
 
 ----
@@ -232,14 +212,14 @@ Well, nothing.
 .. code:: python
 
   >>> def fn():
-  ...     pass
+  ...     print('Aha')
   ...
   >>> fn
   <function fn at 0x10fbd7048>
 
 ----
 
-8: Finally return [1]
+7: Finally return [1]
 =====================
 
 What does this function return?
@@ -267,10 +247,10 @@ What does this function return?
 
 ----
 
-9: try/else/finally [1]
+8: try/else/finally [1]
 =======================
 
-What does this function do?
+What does this function print?
 
 .. code:: python
 
@@ -302,10 +282,10 @@ What does this function do?
 
 ----
 
-10: try/else/finally 2 [1]
-==========================
+9: try/else/finally 2 [1]
+=========================
 
-So what does this function do?
+So what does this function print?
 
 .. code:: python
 
@@ -338,8 +318,8 @@ So what does this function do?
 
 ----
 
-11: Whose variable now? [1 per print]
-=====================================
+10: Whose variable now? [1 per call of print]
+=============================================
 
 What values should I expect to see printed out when I do the following?
 
@@ -377,22 +357,18 @@ What values should I expect to see printed out when I do the following?
 
 ----
 
-12: Format strings [1]
+11: Format strings [1]
 ======================
 
-Which is generally more useful, the first or second, and why?
+Which way of "quoting" is more useful, the first or second, and why?
 
 .. code:: python
 
-  print(f"The value is '{value}'")
-
-.. code:: python
-
-  print(f"The value is {value!r}")
+  print(f"The value is '{value}' vs {value!r}")
 
 ----
 
-Simple cases are simple:
+For a simple string ``value`` it may not be obvious:
 
 .. code:: python
 
@@ -400,15 +376,7 @@ Simple cases are simple:
   >>> print(f"The value is '{value}' vs {value!r}")
   The value is 'nine' vs 'nine'
 
-Quoting is not obvious:
-
-.. code:: python
-
-  >>> value = "they're ready"
-  >>> print(f"The value is '{value}' vs {value!r}")
-  The value is 'they're ready' vs "they're ready"
-
-``1`` is not a string:
+But if ``value`` is not a string the second makes this obvious:
 
 .. code:: python
 
@@ -416,40 +384,29 @@ Quoting is not obvious:
   >>> print(f"The value is '{value}' vs {value!r}")
   The value is '1' vs 1
 
+and it's also better if ``value`` is a string containing single quotes:
+
+.. code:: python
+
+  >>> value = "they're ready"
+  >>> print(f"The value is '{value}' vs {value!r}")
+  The value is 'they're ready' vs "they're ready"
+
 .. Make vim colourisation happy "
-
-----
-
-13: Format strings 2 [1]
-========================
-
-Which do you think looks simpler?
-
-.. code:: python
-
-    print('The value of %s is %r' % (name, value))
-    print('The value of {} is {!r}'.format(name, value))
-    print(f'The value of {name} is {value}')
-
-(all produce the same output)
-
-----
-
-.. code:: python
-
-    print('The value of %s is %r' % (name, value))
-    print('The value of {} is {!r}'.format(name, value))
-    print(f'The value of {name} is {value}')
-
-This is a trick question - it's a personal opinion. In general, for something
-this simple, I prefer the third.
-
-(So everyone gets a point.)
 
 -----
 
-14: Tuples 1 [1]
-================
+...and if you're using old-fashioned ``%s`` formatting, then the equivalent
+is:
+
+.. code:: python
+
+  print(f"The value is '%s' vs %r" % (value, value))
+
+-----
+
+12: Empty tuples [1]
+====================
 
 How do you create an empty tuple?
 
@@ -465,7 +422,7 @@ How do you create an empty tuple?
 
 ----
 
-15: Tuples 2 [1]
+13: 1-Tuples [1]
 ================
 
 So how do you create a tuple of one item?
@@ -505,8 +462,8 @@ But the following doesn't work:
 
 ----
 
-16: A natural extension [1]
-===========================
+14: Just what you expect [1]
+============================
 
 What do the values get set to in:
 
@@ -532,7 +489,7 @@ What do the values get set to in:
 
 ----
 
-17: Take care with % [1]
+15: Take care with % [1]
 ========================
 
 What does the following do?
@@ -568,7 +525,7 @@ or using:
 
 ----
 
-18: Logging [1]
+16: Logging [1]
 ===============
 
 Given:
@@ -610,7 +567,7 @@ not to output anything.
 ----
 
 
-19: More equal than expected [1]
+17: More equal than expected [1]
 ================================
 
 After doing:
@@ -649,7 +606,7 @@ Python regards ``5`` and ``5.0`` as equal (although not the same!)
 
 ----
 
-20: It's a what? [1]
+18: It's a what? [1]
 ====================
 
 OK, what does the dictionary contain after this?
@@ -689,9 +646,88 @@ For historical reasons, booleans are subtypes of integers.
   >>> True + True
   2
 
+-----
+
+19: Don't do this at home [2]
+=============================
+
+What does the following code print out?
+
+.. code:: python
+
+  def some_func(default_arg=[]):
+      default_arg.append("ick")
+      print(default_arg)
+
+  some_func()
+  some_func()
+  some_func(['aha'])
+  some_func()
+
 ----
 
-22: Enumeration [2]
+.. code:: python
+
+  >>> def some_func(arg=[]):
+  ...     arg.append("ick")
+  ...     print(arg)
+  ...
+  >>> some_func()
+  ['ick']
+  >>> some_func()
+  ['ick', 'ick']
+  >>> some_func(['aha'])
+  ['aha', 'ick']
+  >>> some_func()
+  ['ick', 'ick', 'ick']
+
+----
+
+Perhaps we meant to do something more like:
+
+.. code:: python
+
+    def some_func(arg=None):
+        if not arg:
+            arg = []
+        arg.append("ick")
+        print(arg)
+
+----
+
+20: Mutation [1]
+================
+
+What values do you expect to remain in ``list1`` after doing:
+
+.. code:: python
+
+  list1 = [1, 2, 3, 4]
+  for item in list1:
+    list1.remove(item)
+
+----
+
+.. code:: python
+
+  >>> list1 = [1, 2, 3, 4]
+  >>> for item in list1:
+  ...   list1.remove(item)
+  ...
+  >>> print(list1)
+  [2, 4]
+
+We look at the list, which contains ``[1, 2, 3, 4]``, take its first value as
+``item``, and remove that, leaving us with ``[2, 3, 4]``.
+
+Then we look at the list, which now contains ``[2, 3, 4]`` and take its
+*second* value as ``item``, and remove that, leaving us with ``[2, 4]``.
+
+There isn't a third value in ``[2, 4]``, so we're done.
+
+----
+
+21: Enumeration [2]
 ===================
 
 After doing:
@@ -727,7 +763,7 @@ It's as if we did:
 
 ----
 
-23: In or not in [1 for each]
+22: In or not in [1 for each]
 =============================
 
 What results do the following produce?
@@ -757,7 +793,7 @@ What results do the following produce?
 
 ----
 
-24: C does the same [1]
+23: C does the same [1]
 =======================
 
 What does this print, and why?
@@ -789,7 +825,7 @@ which is the same as:
 
 ----
 
-25: Where did it go [2]
+24: Where did it go [2]
 =======================
 
 What happens when the following tries to print ``e``?
@@ -819,26 +855,23 @@ What happens when the following tries to print ``e``?
 ----
 
 When an ``except`` clause assigns an exception to a target (as here), that
-value is cleared at the end of the exception code. So it as if:
+value is cleared at the end of the ``except`` clause. So the code acts like:
 
 .. code:: python
 
-    except Exception as e:
-        cope_with_it
-
-is translated into
-
-.. code:: python
-
+    e = 7
+    try:
+        raise Exception()
     except Exception as e:
         try:
-            cope_with_it
+            pass
         finally:
             del e
+    print(e)
 
 ----
 
-26: Follow through all the way [3]
+25: Follow through all the way [3]
 ==================================
 
 After the following, what is ``a`` set to, and why?
@@ -899,180 +932,7 @@ and we've got a recursive datastructure - the ``...`` above indicates this.
 
 ----
 
-26: Mutation 1 [1]
-==================
-
-What values do you expect to remain in ``list1`` after doing:
-
-.. code:: python
-
-  list1 = [1, 2, 3, 4]
-  for item in list1:
-    list1.remove(item)
-
-----
-
-.. code:: python
-
-  >>> list1 = [1, 2, 3, 4]
-  >>> for item in list1:
-  ...   list1.remove(item)
-  ...
-  >>> print(list1)
-  [2, 4]
-
-We look at the list ``[1, 2, 3, 4]``, take its first value as ``item``,
-and remove that, leaving us with ``[2, 3, 4]``.
-
-Then we look at the list ``[2, 3, 4]`` and take its *second* value as
-``item``, and remove that, leaving us with ``[2, 4]``.
-
-There isn't a third value in ``[2, 4]``, so we're done.
-
-----
-
-27: Mutation 2 [1]
-==================
-
-What values do you expect to remain in ``list2`` after doing:
-
-.. code:: python
-
-  list2 = [1, 2, 3, 4]
-  for index, item in enumerate(list2):
-    list2.pop(index)
-
-----
-
-.. code:: python
-
-  >>> list2 = [1, 2, 3, 4]
-  >>> for index, item in enumerate(list2):
-  ...   list2.pop(index)
-  ...
-  1
-  3
-  >>> print(list2)
-  [2, 4]
-
-We evaluate ``enumerate(list2)`` before the first loop, and that gives us an
-iterator independent of the content of the list, which will return the values
-``(0, 1)``, ``(1, 2)``, ``(2, 3)``, ``(3, 4)``.
-
-So our first time round the loop we pop ``list2[0]`` from ``[1, 2, 3, 4]``.
-
-The second time round we pop ``list[1]`` from ``[2, 3, 4]``, leaving us with
-``[2, 4]``.
-
-And the next time round, there isn't a ``list[2]`` in ``[2, 4]`` so we're
-done.
-
------
-
-28: Don't do this at home [2]
-=============================
-
-What does the following code print out?
-
-.. code:: python
-
-  def some_func(default_arg=[]):
-      default_arg.append("ick")
-      print(default_arg)
-
-  some_func()
-  some_func()
-  some_func(['aha'])
-  some_func()
-
-----
-
-.. code:: python
-
-  >>> def some_func(arg=[]):
-  ...     arg.append("ick")
-  ...     print(arg)
-  ...
-  >>> some_func()
-  ['ick']
-  >>> some_func()
-  ['ick', 'ick']
-  >>> some_func(['aha'])
-  ['aha', 'ick']
-  >>> some_func()
-  ['ick', 'ick', 'ick']
-
-----
-
-Perhaps we meant to do something more like:
-
-.. code:: python
-
-    def some_func(arg=None):
-        if not arg:
-            arg = []
-        arg.append("ick")
-        print(arg)
-
-----
-
-29: Two things that are not the same [1]
-========================================
-
-What do we expect ``a`` and ``b`` to end up as?
-
-.. code:: python
-
-    a = [1, 2, 3, 4]
-    b = a
-    a = a + [5, 6, 7, 8]
-
-----
-
-.. code:: python
-
-  >>> a = [1, 2, 3, 4]
-  >>> b = a
-  >>> a = a + [5, 6, 7, 8]
-  >>> a
-  [1, 2, 3, 4, 5, 6, 7, 8]
-  >>> b
-  [1, 2, 3, 4]
-
-Our final ``a`` is a new list, not the same as the original ``a``.
-
-----
-
-30: Two things that are not the same (reprise) [2]
-==================================================
-
-What about now?
-
-.. code:: python
-
-  a = [1, 2, 3, 4]
-  b = a
-  a += [5, 6, 7, 8]
-
-----
-
-.. code:: python
-
-  >>> a = [1, 2, 3, 4]
-  >>> b = a
-  >>> a += [5, 6, 7, 8]
-  >>> a
-  [1, 2, 3, 4, 5, 6, 7, 8]
-  >>> b
-  [1, 2, 3, 4, 5, 6, 7, 8]
-
-``+=`` is not guaranteed to be the same as using ``+`` on an object, and in
-particular it does ``extend`` on a list. So ``a`` has its contents altered,
-and ``b`` refers to the same object as ``a`` does.
-
-----
-
-31: Unicode [1]
+26: Unicode [1]
 ===============
 
 What does |unicode-integer| return?
@@ -1094,11 +954,9 @@ DIGIT ZERO``.
    :height: 20
    :align: middle
 
-
-
 ----
 
-32: Why do we need self? [2]
+27: Why do we need self? [2]
 ============================
 
 .. code:: python

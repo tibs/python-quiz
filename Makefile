@@ -19,7 +19,7 @@ pdf: notes slides
 
 .PHONY: notes
 notes:
-	pandoc python-quiz-notes.rst -o python-quiz-notes.pdf -V papersize:a4
+	pandoc python-quiz-notes.rst -o python-quiz-notes.pdf -V papersize:a4 --highlight-style tango
 
 # The available aspect ratio of slides (for beamer only) are 1610 for 16:10,
 # 169 for 16:9, 149 for 14:9, 141 for 1.41:1, 54 for 5:4, 43 for 4:3 which is
@@ -27,8 +27,8 @@ notes:
 # pair of resolutions.
 .PHONY: slides
 slides:
-	pandoc python-quiz-slides.rst -t beamer -o python-quiz-slides-4x3.pdf -V aspectratio:43
-	pandoc python-quiz-slides.rst -t beamer -o python-quiz-slides-16x9.pdf -V aspectratio:169
+	pandoc python-quiz-slides.rst -t beamer -o python-quiz-slides-4x3.pdf -V aspectratio:43 --highlight-style tango
+	pandoc python-quiz-slides.rst -t beamer -o python-quiz-slides-16x9.pdf -V aspectratio:169 --highlight-style tango
 
 # The "original" slides - this has (probably) all of the slides, but may be
 # slightly out-of-date with respect to the slides that are also in the main
@@ -36,12 +36,12 @@ slides:
 # ratio.
 .PHONY: orig
 orig:
-	pandoc python-quiz-slides-orig.rst -t beamer -o python-quiz-slides-orig-4x3.pdf -V aspectratio:43
+	pandoc python-quiz-slides-orig.rst -t beamer -o python-quiz-slides-orig-4x3.pdf -V aspectratio:43 --highlight-style tango
 
 # A quick target to use when working on the slides themselves.
 .PHONY: 43
 43:
-	pandoc python-quiz-slides.rst -t beamer -o python-quiz-slides-4x3.pdf -V aspectratio:43
+	pandoc python-quiz-slides.rst -t beamer -o python-quiz-slides-4x3.pdf -V aspectratio:43 --highlight-style tango
 	open python-quiz-slides-4x3.pdf
 
 .PHONY: clean
