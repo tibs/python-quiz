@@ -9,8 +9,8 @@ default: html pdf
 .PHONY: html
 html:
 	rst2html.py README.rst README.html
-	rst2html.py python-quiz-slides-short.rst python-quiz-slides-short.html
 	rst2html.py python-quiz-slides.rst python-quiz-slides.html
+	rst2html.py python-quiz-slides-orig.rst python-quiz-slides-orig.html
 	rst2html.py python-quiz-notes.rst python-quiz-notes.html
 
 # We also make the python-quiz-notes as PDF, because we can and it might be useful.
@@ -29,13 +29,20 @@ notes:
 slides:
 	pandoc python-quiz-slides.rst -t beamer -o python-quiz-slides-4x3.pdf -V aspectratio:43
 	pandoc python-quiz-slides.rst -t beamer -o python-quiz-slides-16x9.pdf -V aspectratio:169
-	pandoc python-quiz-slides-short.rst -t beamer -o python-quiz-slides-short-4x3.pdf -V aspectratio:43
-	pandoc python-quiz-slides-short.rst -t beamer -o python-quiz-slides-short-16x9.pdf -V aspectratio:169
 
+# The "original" slides - this has (probably) all of the slides, but may be
+# slightly out-of-date with respect to the slides that are also in the main
+# slides file. This is not built by default. We only provide the one aspect
+# ratio.
+.PHONY: orig
+orig:
+	pandoc python-quiz-slides-orig.rst -t beamer -o python-quiz-slides-orig-4x3.pdf -V aspectratio:43
+
+# A quick target to use when working on the slides themselves.
 .PHONY: 43
 43:
-	pandoc python-quiz-slides-short.rst -t beamer -o python-quiz-slides-short-4x3.pdf -V aspectratio:43
-	open python-quiz-slides-short-4x3.pdf
+	pandoc python-quiz-slides.rst -t beamer -o python-quiz-slides-4x3.pdf -V aspectratio:43
+	open python-quiz-slides-4x3.pdf
 
 .PHONY: clean
 clean:
