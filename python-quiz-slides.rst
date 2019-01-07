@@ -17,8 +17,8 @@ Note that Python 3 is assumed throughout.
 
 ----
 
-General: beginning with P
-=========================
+1: Beginning with P [1 for each]
+================================
 
 How many programming languages can you name that start with P, not including
 Python itself?
@@ -92,16 +92,8 @@ and Python itself
 
 ----
 
-Nothing.
-
-.. code:: python
-
-  >>> None
-
-----
-
-REPL: quit
-==========
+2: Quit [1]
+===========
 
 What does this print?
 
@@ -118,10 +110,10 @@ What does this print?
 
 ----
 
-REPL: getting out
-=================
+3: Getting out [1 for each]
+===========================
 
-So how do you exist the Python prompt? (one point for each obvious mechanism).
+So how do you exit the Python prompt?
 
 ----
 
@@ -152,8 +144,8 @@ Or even:
 
 ----
 
-Workings: not Perl
-==================
+4: Not Perl [1]
+===============
 
 What does this print?
 
@@ -175,8 +167,8 @@ What does this print?
 
 ----
 
-Workings: to the...
-===================
+5: To the... [2]
+================
 
 What does the following print?
 
@@ -197,8 +189,8 @@ The first is ``power``, and the second ``bitwise exclusive or``.  2 cubed is
 
 ----
 
-Workings: empty function
-========================
+6: Empty function [1]
+=====================
 
 What does this function return?
 
@@ -222,8 +214,8 @@ It returns ``None``.
 
 ----
 
-Workings: empty function 2
-==========================
+7: Empty function 2 [1]
+=======================
 
 What does this code do?
 
@@ -247,8 +239,8 @@ Well, nothing.
 
 ----
 
-Workings: finally return
-========================
+8: Finally return [1]
+=====================
 
 What does this function return?
 
@@ -275,8 +267,8 @@ What does this function return?
 
 ----
 
-Workings: try/else/finally
-==========================
+9: try/else/finally [1]
+=======================
 
 What does this function do?
 
@@ -310,8 +302,8 @@ What does this function do?
 
 ----
 
-Workings: try/else/finally 2
-============================
+10: try/else/finally 2 [1]
+==========================
 
 So what does this function do?
 
@@ -346,8 +338,8 @@ So what does this function do?
 
 ----
 
-Workings: whose variable now?
-=============================
+11: Whose variable now? [1 per print]
+=====================================
 
 What values should I expect to see printed out when I do the following?
 
@@ -385,8 +377,8 @@ What values should I expect to see printed out when I do the following?
 
 ----
 
-Format strings
-==============
+12: Format strings [1]
+======================
 
 Which is generally more useful, the first or second, and why?
 
@@ -428,8 +420,8 @@ Quoting is not obvious:
 
 ----
 
-Format strings 2
-================
+13: Format strings 2 [1]
+========================
 
 Which do you think looks simpler?
 
@@ -452,10 +444,12 @@ Which do you think looks simpler?
 This is a trick question - it's a personal opinion. In general, for something
 this simple, I prefer the third.
 
+(So everyone gets a point.)
+
 -----
 
-Tuples 1
-========
+14: Tuples 1 [1]
+================
 
 How do you create an empty tuple?
 
@@ -471,8 +465,8 @@ How do you create an empty tuple?
 
 ----
 
-Tuples 2
-========
+15: Tuples 2 [1]
+================
 
 So how do you create a tuple of one item?
 
@@ -511,8 +505,8 @@ But the following doesn't work:
 
 ----
 
-Workings: a natural extension
-=============================
+16: A natural extension [1]
+===========================
 
 What do the values get set to in:
 
@@ -538,8 +532,8 @@ What do the values get set to in:
 
 ----
 
-Conundrum: take care with %
-===========================
+17: Take care with % [1]
+========================
 
 What does the following do?
 
@@ -574,8 +568,8 @@ or using:
 
 ----
 
-Logging
-=======
+18: Logging [1]
+===============
 
 Given:
 
@@ -616,8 +610,8 @@ not to output anything.
 ----
 
 
-Workings: more equal than expected
-==================================
+19: More equal than expected [1]
+================================
 
 After doing:
 
@@ -655,8 +649,8 @@ Python regards ``5`` and ``5.0`` as equal (although not the same!)
 
 ----
 
-Workings: it's a what?
-======================
+20: It's a what? [1]
+====================
 
 OK, what does the dictionary contain after this?
 
@@ -697,8 +691,8 @@ For historical reasons, booleans are subtypes of integers.
 
 ----
 
-Conundrum: enumeration
-======================
+22: Enumeration [2]
+===================
 
 After doing:
 
@@ -733,10 +727,10 @@ It's as if we did:
 
 ----
 
-Conundrum: in or not in
-=======================
+23: In or not in [1 for each]
+=============================
 
-What results do the following produce? (one point for each one corect)
+What results do the following produce?
 
 .. code:: python
 
@@ -763,8 +757,8 @@ What results do the following produce? (one point for each one corect)
 
 ----
 
-Conundrum: C does the same
-==========================
+24: C does the same [1]
+=======================
 
 What does this print, and why?
 
@@ -795,8 +789,8 @@ which is the same as:
 
 ----
 
-Conundrum: where did it go
-==========================
+25: Where did it go [2]
+=======================
 
 What happens when the following tries to print ``e``?
 
@@ -844,8 +838,8 @@ is translated into
 
 ----
 
-Conundrum: follow through all the way
-=====================================
+26: Follow through all the way [3]
+==================================
 
 After the following, what is ``a`` set to, and why?
 
@@ -905,8 +899,8 @@ and we've got a recursive datastructure - the ``...`` above indicates this.
 
 ----
 
-Conundrum: mutation 1
-=====================
+26: Mutation 1 [1]
+==================
 
 What values do you expect to remain in ``list1`` after doing:
 
@@ -937,8 +931,8 @@ There isn't a third value in ``[2, 4]``, so we're done.
 
 ----
 
-Conundrum: mutation 2
-=====================
+27: Mutation 2 [1]
+==================
 
 What values do you expect to remain in ``list2`` after doing:
 
@@ -975,8 +969,8 @@ done.
 
 -----
 
-Conundrum: don't do this at home
-================================
+28: Don't do this at home [2]
+=============================
 
 What does the following code print out?
 
@@ -1022,8 +1016,8 @@ Perhaps we meant to do something more like:
 
 ----
 
-Conundrum: two things that are not the same
-===========================================
+29: Two things that are not the same [1]
+========================================
 
 What do we expect ``a`` and ``b`` to end up as?
 
@@ -1049,8 +1043,8 @@ Our final ``a`` is a new list, not the same as the original ``a``.
 
 ----
 
-Conundrum: two things that are not the same (reprise)
-=====================================================
+30: Two things that are not the same (reprise) [2]
+==================================================
 
 What about now?
 
@@ -1078,8 +1072,8 @@ and ``b`` refers to the same object as ``a`` does.
 
 ----
 
-Conundrum: unicode
-==================
+31: Unicode [1]
+===============
 
 What does |unicode-integer| return?
 
@@ -1104,8 +1098,8 @@ DIGIT ZERO``.
 
 ----
 
-Practicality: Why do we need self?
-==================================
+32: Why do we need self? [2]
+============================
 
 .. code:: python
 
