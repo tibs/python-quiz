@@ -17,26 +17,6 @@ Note that Python 3 is assumed throughout.
 
 ----
 
-General: first year
-===================
-
-In what year did you first use Python?
-
-----
-
-If that year was prime, score a point
-
-Prime years between 1990 and 2019 are:
-
-      1993,
-      1997,
-      1999,
-      2003,
-      2011,
-      2017
-
-----
-
 General: beginning with P
 =========================
 
@@ -109,56 +89,6 @@ Pure,
 Pure Data,
 PureBasic,
 and Python itself
-
-----
-
-General: offside rule
-=====================
-
-How many programming languages that use significant indentation ("the offside
-rule") can you name, excluding Python?
-
-----
-
-https://en.wikipedia.org/wiki/Off-side_rule lists:
-
-ABC,
-Boo,
-BuddyScript,
-Cobra,
-CoffeeScript,
-Converge,
-Curry,
-Elixir,
-Elm,
-F#,
-Genie,
-Haskell,
-Inform 7,
-ISWIM,
-LiveScript,
-Miranda,
-Nemerle,
-Nim,
-occam,
-PROMAL,
-Scheme,
-Spin,
-XL,
-and Python itself
-
-Apparently ISWIM is the abstract language that introduced the rule.
-
-----
-
-REPL: None
-==========
-
-What does this print?
-
-.. code:: python
-
-  >>> None
 
 ----
 
@@ -1119,6 +1049,9 @@ Our final ``a`` is a new list, not the same as the original ``a``.
 
 ----
 
+Conundrum: two things that are not the same (reprise)
+=====================================================
+
 What about now?
 
 .. code:: python
@@ -1128,9 +1061,6 @@ What about now?
   a += [5, 6, 7, 8]
 
 ----
-
-Conundrum: two things that are not the same?
-============================================
 
 .. code:: python
 
