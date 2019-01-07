@@ -17,8 +17,8 @@ Note that Python 3 is assumed throughout.
 
 ----
 
-Intro: first year
-=================
+General: first year
+===================
 
 In what year did you first use Python?
 
@@ -37,8 +37,8 @@ Prime years between 1990 and 2019 are:
 
 ----
 
-Intro: beginning with P
-=======================
+General: beginning with P
+=========================
 
 How many programming languages can you name that start with P, not including
 Python itself?
@@ -112,8 +112,8 @@ and Python itself
 
 ----
 
-Intro: offside rule
-===================
+General: offside rule
+=====================
 
 How many programming languages that use significant indentation ("the offside
 rule") can you name, excluding Python?
@@ -572,7 +572,7 @@ But the following doesn't work:
 
 .. code:: python
 
-  >>> a = 1
+  >>> a = (1)
   >>> a
   1
   >>> type(a)
