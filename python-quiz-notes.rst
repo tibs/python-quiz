@@ -20,14 +20,14 @@ Note that Python 3 is assumed throughout.
 .. contents::
 
 
-Silly: beginning with P
-=======================
+Beginning with P
+================
 
 I thought of Perl, Perl6, PHP, Pascal, Prolog, ...
 
 
-Silly: offside rule
-===================
+Offside rule
+============
 
 
 Apparently ISWIM is the abstract language that introduced the rule.
@@ -42,56 +42,20 @@ With some caveats
 * Scheme (when using one of several Scheme Requests for Implementations),
 
 
-Workings: to the...
-===================
+To the...
+=========
 
 In some programming languages, the "power" operator is ``^``.
 
 
-Workings: try/else/finally
-==========================
+try/else/finally
+================
 
 The order matters - the ``else`` must come before the ``finally``.
 
 
-Tuples 2
-========
-
-So how do you create a tuple of one item?
-
-But the following doesn't work:
-
-.. code:: python
-
-  >>> a = (1)
-  >>> a
-  1
-  >>> type(a)
-  <class 'int'>
-
-Because the ``(`` and ``)`` are grouping operators - and ``(1)`` is identical
-to ``1``.
-
-It's the comma that makes a tuple, and the zero length tuple is an oddity.
-
-
-Logging
-=======
-
-The third is correct:
-
-.. code:: python
-
-  logger.info('A is %r and B is %r', a, b)
-
-as the logging callable will only construct the final string if the log
-message is actually output. In the other two examples, the final string is
-created when the ``logger.info`` call is made, even if the callable decides
-not to output anything.
-
-
-Conundrum: where did it go
-==========================
+Where did it go
+===============
 
 When an ``except`` clause assigns an exception to a target (as here), that
 value is cleared at the end of the exception code. So it as if:
@@ -124,8 +88,8 @@ would it have been cleared.
 For more details, see https://docs.python.org/3/reference/compound_stmts.html#except
 
 
-Conundrum: follow through all the way
-=====================================
+Follow through all the way
+==========================
 
 .. code:: python
 
@@ -170,7 +134,7 @@ and we've got a recursive datastructure - the ``...`` above indicates this.
 
 .. code:: python
 
-  >>> a is exp[0] is a[5][0] is a[5][0][5][0] is a[5][0][5][0][5][0] # and so on
+  >>> a is exp[0] is a[5][0] is a[5][0][5][0]  # and so on
   True
 
 .. vim: set filetype=rst tabstop=8 softtabstop=2 shiftwidth=2 expandtab:
